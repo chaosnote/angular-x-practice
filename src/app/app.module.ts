@@ -5,9 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+import { AccountValidatorDirective } from './directive/account-validator.directive';
+
 
 @NgModule({
   declarations: [
+    AccountValidatorDirective,
     AppComponent
   ],
   imports: [
