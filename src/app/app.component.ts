@@ -23,7 +23,11 @@ export class AppComponent implements OnInit
       {
         name : "Directive",
         value : "/test-direct"
-      }
+      },
+      {
+        name : "Pipe",
+        value : "/test-pipe"
+      },
     ] ;
   }
   data : IPath[] ;
