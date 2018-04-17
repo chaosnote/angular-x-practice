@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 
 import { GetService, PostService } from './ajax.service';
+import { GuardService } from './guard.service';
 
 //@see https://github.com/angular/angular/blob/5.2.10/packages/core/src/metadata/ng_module.ts#L12-L21
 
@@ -21,7 +22,8 @@ export class ServiceModule
       ngModule: ServiceModule,
       providers: [
         GetService,
-        PostService
+        PostService,
+        GuardService
       ]
     };
   }

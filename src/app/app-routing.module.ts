@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GuardService } from './service/guard.service';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
   },
   {
     path: "test-navigate/time/:time",
+    canActivate : [GuardService], 
     loadChildren: "./component/test-navigate/test-navigate.module#TestNavigateModule"
   },
 ];

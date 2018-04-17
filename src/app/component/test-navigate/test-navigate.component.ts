@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 //@see https://angular.io/api/router/Router
 
@@ -8,13 +9,20 @@ import { Router } from '@angular/router';
   templateUrl: './test-navigate.component.html',
   styleUrls: ['./test-navigate.component.css']
 })
-export class TestNavigateComponent implements OnInit {
+export class TestNavigateComponent implements OnInit, OnDestroy {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private activeRoute: ActivatedRoute) { }
 
+  private paramSubscribe : Subscription ;
   ngOnInit() {
+    this.paramSubscribe = this.activeRoute.queryParams.subscribe(res=>{
+      console.log(res) ;
+    }) ;
   }
-
+  ngOnDestroy(): void
+  {
+    this.paramSubscribe.unsubscribe() ;
+  }
   onMode_1()
   {
     // 設定值
