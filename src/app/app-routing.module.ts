@@ -19,6 +19,10 @@ const routes: Routes = [
     path: "test-pipe",
     loadChildren: "./component/test-pipe/test-pipe.module#TestPipeModule"
   },
+  {
+    path: "test-service",
+    loadChildren: "./component/test-service/test-service.module#TestServiceModule"
+  },
 ];
 
 //@see https://angular.io/tutorial/toh-pt5#add-routes

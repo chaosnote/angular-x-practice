@@ -28,6 +28,10 @@ export class AppComponent implements OnInit
         name : "Pipe",
         value : "/test-pipe"
       },
+      {
+        name : "Service",
+        value : "/test-service"
+      },
     ] ;
   }
   data : IPath[] ;
