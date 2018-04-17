@@ -23,6 +23,14 @@ const routes: Routes = [
     path: "test-service",
     loadChildren: "./component/test-service/test-service.module#TestServiceModule"
   },
+  {
+    path: "test-navigate",
+    loadChildren: "./component/test-navigate/test-navigate.module#TestNavigateModule"
+  },
+  {
+    path: "test-navigate/time/:time",
+    loadChildren: "./component/test-navigate/test-navigate.module#TestNavigateModule"
+  },
 ];
 
 //@see https://angular.io/tutorial/toh-pt5#add-routes

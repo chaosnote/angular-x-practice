@@ -32,6 +32,10 @@ export class AppComponent implements OnInit
         name : "Service",
         value : "/test-service"
       },
+      {
+        name : "Navigate",
+        value : "/test-navigate"
+      },
     ] ;
   }
   data : IPath[] ;
