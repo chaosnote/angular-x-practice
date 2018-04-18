@@ -23,8 +23,12 @@ export class GetService
     withCredentials: true
   });
 
-  execute<T>(action: string): Observable<T>
+  execute<T>(action: string, params ?: any ): Observable<T>
   {
+    if(params != undefined)
+    {
+      this.options.params = params ;
+    }
     return this.http.get(getAPIPath(action), this.options)
       .map(res => res.json())
       .catch(res => Observable.throw("非預期網路錯誤"));

@@ -18,7 +18,7 @@ export class TestServiceComponent implements OnInit
 
   onGet()
   {
-    this.get.execute("test").toPromise().then(res => console.log(res)).catch(err => console.log(err));
+    this.get.execute("test", { time: new Date().getTime() }).toPromise().then(res => console.log(res)).catch(err => console.log(err));
   }
 
   onPost()
