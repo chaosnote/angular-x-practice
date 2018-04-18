@@ -36,6 +36,10 @@ export class AppComponent implements OnInit
         name : "Navigate",
         value : "/test-navigate"
       },
+      {
+        name : "Shared",
+        value : "/test-shared"
+      },
     ] ;
   }
   data : IPath[] ;

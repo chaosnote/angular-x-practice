@@ -33,6 +33,10 @@ const routes: Routes = [
     canActivate : [GuardService], 
     loadChildren: "./component/test-navigate/test-navigate.module#TestNavigateModule"
   },
+  {
+    path: "test-shared",
+    loadChildren: "./component/test-shared/test-shared.module#TestSharedModule"
+  },
 ];
 
 //@see https://angular.io/tutorial/toh-pt5#add-routes
