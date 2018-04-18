@@ -40,6 +40,10 @@ export class AppComponent implements OnInit
         name : "Shared",
         value : "/test-shared"
       },
+      {
+        name : "Anime",
+        value : "/test-anime"
+      },
     ] ;
   }
   data : IPath[] ;

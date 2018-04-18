@@ -37,6 +37,10 @@ const routes: Routes = [
     path: "test-shared",
     loadChildren: "./component/test-shared/test-shared.module#TestSharedModule"
   },
+  {
+    path: "test-anime",
+    loadChildren: "./component/test-anime/test-anime.module#TestAnimeModule"
+  },
 ];
 
 //@see https://angular.io/tutorial/toh-pt5#add-routes
