@@ -6,6 +6,12 @@ import { environment } from '../../environments/environment';
 
 import 'rxjs/Rx';
 
+interface IRes
+{
+    status : number ;
+    data ?: any ;
+}
+
 function getAPIPath(action: string)
 {
   return `${environment.api}${action}`;
@@ -23,7 +29,7 @@ export class GetService
     withCredentials: true
   });
 
-  execute<T>(action: string, params ?: any ): Observable<T>
+  execute(action: string, params ?: any ): Observable<IRes>
   {
     if(params != undefined)
     {
@@ -44,7 +50,7 @@ export class PostService
     withCredentials: true
   });
 
-  execute<T>(action: string, body?: any): Observable<T>
+  execute(action: string, body?: any): Observable<IRes>
   {
     return this.http.post(getAPIPath(action), body, this.options)
       .map(res => res.json())
