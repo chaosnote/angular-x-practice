@@ -61,7 +61,7 @@ export class TodoComponent implements OnInit
         .then(() =>
         {
           this.inProcess = false;
-          this.src.content = "" ;
+          this.src.content = "";
           this.findAll();
         })
     }
@@ -74,7 +74,11 @@ export class TodoComponent implements OnInit
 
   onUpdate(item: IItem)
   {
-    if (item.hasChange == undefined) alert("no value change");
+    if (item.hasChange == undefined)
+    {
+      alert("no value change");
+      return;
+    }
     if (this.inProcess) return;
     this.inProcess = true;
     this.post.execute("todo/u", {
