@@ -1,0 +1,21 @@
+<div class="mx-lg-2">
+  <div class="form-row">
+    <div class="col-6 mb-2">
+      <label for="content" class="sr-only">內容</label>
+      <input type="text" class="form-control" id="content" [(ngModel)]="src.content">
+    </div>
+    <button type="text" class="btn btn-primary mb-2" (click)="onAdd()">Add</button>
+  </div>
+  <div class="input-group mb-2" *ngFor="let item of list">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input type="checkbox" aria-label="Checkbox for following text input" [(ngModel)]="item.finish" (ngModelChange)="onChange(item)">
+      </div>
+    </div>
+    <div class="form-control">{{item.content}}</div>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="onUpdate(item)">Update</button>
+      <button class="btn btn-outline-danger" type="button" (click)="onDel(item)">Del</button>
+    </div>
+  </div>
+</div>

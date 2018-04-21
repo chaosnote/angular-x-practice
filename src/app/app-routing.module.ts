@@ -41,6 +41,10 @@ const routes: Routes = [
     path: "test-anime",
     loadChildren: "./component/test-anime/test-anime.module#TestAnimeModule"
   },
+  {
+    path: "todo",
+    loadChildren: "./component/todo/todo.module#TodoModule"
+  },
 ];
 
 //@see https://angular.io/tutorial/toh-pt5#add-routes

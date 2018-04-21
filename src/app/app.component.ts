@@ -44,6 +44,10 @@ export class AppComponent implements OnInit
         name : "Anime",
         value : "/test-anime"
       },
+      {
+        name : "Todo",
+        value : "/todo"
+      },
     ] ;
   }
   data : IPath[] ;
